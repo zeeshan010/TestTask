@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "6e3773a6-5126-4bf2-8312-64d7f6f397fd",
+		"name": "TestTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SearchHotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"search\": \"dubai\",\r\n  \"startDate\": \"2022-12-15\",\r\n  \"endDate\": \"2022-12-16\",\r\n  \"roomType\": \"Single\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5111/api/Hotel/Search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5111",
+					"path": [
+						"api",
+						"Hotel",
+						"Search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoomDetailsByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5111/api/Hotel/GetRoomDetailsById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5111",
+					"path": [
+						"api",
+						"Hotel",
+						"GetRoomDetailsById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHotelPics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5111/api/Hotel/GetHotelPicsById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5111",
+					"path": [
+						"api",
+						"Hotel",
+						"GetHotelPicsById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoomPics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5111/api/Hotel/GetRoomPicsById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5111",
+					"path": [
+						"api",
+						"Hotel",
+						"GetRoomPicsById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookARoom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"HotelId\":1,\r\n    \"RoomId\":1,\r\n    \"FirstName\":\"Usman\",\r\n    \"LastName\":\"Arshad\",\r\n    \"StartDate\":\"2022-12-15\",\r\n    \"EndDate\":\"2022-12-16\",\r\n    \"Email\":\"abc@test.com\",\r\n    \"Mobile\":\"0569472012\",\r\n    \"TotalPrice\":200,\r\n    \"DiscountPercentage\":10,\r\n    \"PriceAfterDiscount\":180\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5111/api/Hotel/ReserveRoom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5111",
+					"path": [
+						"api",
+						"Hotel",
+						"ReserveRoom"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
